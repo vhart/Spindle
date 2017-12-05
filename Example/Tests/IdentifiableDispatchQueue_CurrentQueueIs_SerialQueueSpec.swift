@@ -73,11 +73,11 @@ class IdentifiableDispatchQueue_SerialQueueSpec: QuickSpec {
 
                         it("returns true") {
                             var isQueue2 = true
-                            
+
                             queue1.queue.sync {
                                 isQueue2 = IdentifiableDispatchQueue.currentQueueIs(queue2)
                             }
-                            
+
                             expect(isQueue2) == false
                         }
                     }

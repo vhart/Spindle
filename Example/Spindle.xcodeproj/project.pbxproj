@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		D5BAF9561FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF9551FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift */; };
+		D5BAF9581FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift */; };
+		D5BAF95A1FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift */; };
+		D5BAF95C1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF95B1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift */; };
 		F0210263529D01B2CFA8DF5A /* Pods_Spindle_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00C1597FF4A6136643B1CF1 /* Pods_Spindle_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -16,10 +20,14 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		679D853C32E87545E729646B /* Pods-Spindle_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spindle_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spindle_Tests/Pods-Spindle_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B5ACE11BE22895265480680A /* Spindle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Spindle.podspec; path = ../Spindle.podspec; sourceTree = "<group>"; };
+		B5ACE11BE22895265480680A /* Spindle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Spindle.podspec; path = ../Spindle.podspec; sourceTree = "<group>"; };
 		C00C1597FF4A6136643B1CF1 /* Pods_Spindle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spindle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD9CFA53498804176A3D2EF9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		EF21ADE525C6CE4BF4AA95EF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CD9CFA53498804176A3D2EF9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D5BAF9551FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_InitializersSpec.swift; sourceTree = "<group>"; };
+		D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift; sourceTree = "<group>"; };
+		D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift; sourceTree = "<group>"; };
+		D5BAF95B1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift; path = ../IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift; sourceTree = "<group>"; };
+		EF21ADE525C6CE4BF4AA95EF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F794E1A488CB9491D1B80D79 /* Pods-Spindle_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spindle_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spindle_Tests/Pods-Spindle_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +83,10 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				D5BAF9551FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift */,
+				D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift */,
+				D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift */,
+				D5BAF95B1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -131,10 +143,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -223,7 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BAF9561FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				D5BAF9581FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift in Sources */,
+				D5BAF95C1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift in Sources */,
+				D5BAF95A1FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -363,7 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
