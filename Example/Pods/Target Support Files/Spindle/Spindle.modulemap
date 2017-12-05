@@ -1,0 +1,6 @@
+framework module Spindle {
+  umbrella header "Spindle-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Spindle",
+  "version": "0.1.0",
+  "summary": "A short description of Spindle.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/vhart/Spindle",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "vhart": "varindra@shopkeep.com"
+  },
+  "source": {
+    "git": "https://github.com/vhart/Spindle.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Spindle/Classes/**/*"
+}
