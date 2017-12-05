@@ -1,11 +1,11 @@
 PODS:
   - Nimble (7.0.2)
-  - Quick (1.2.0)
+  - Quick (1.1.0)
   - Spindle (0.1.0)
 
 DEPENDENCIES:
   - Nimble (~> 7.0.2)
-  - Quick (~> 1.2.0)
+  - Quick (~> 1.1.0)
   - Spindle (from `../`)
 
 EXTERNAL SOURCES:
@@ -14,9 +14,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Spindle: 61f2a561c35ff062600f64dcfc0b83a6ad3123af
 
-PODFILE CHECKSUM: 3e63cfe55cc87e25f37f2c6290cd9f2d37b461b3
+PODFILE CHECKSUM: 474665fca336b9ca008512131b0e0f88068228fd
 
 COCOAPODS: 1.2.1
