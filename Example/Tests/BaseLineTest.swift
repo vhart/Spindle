@@ -4,7 +4,7 @@ import Quick
 import Nimble
 import Spindle
 
-class TableOfContentsSpec: QuickSpec {
+class BaseLineTest: QuickSpec {
     override func spec() {
 
         context("these will pass") {

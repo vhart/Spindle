@@ -22,7 +22,7 @@ pod 'Spindle'
 
 ## Author
 
-vhart, varindra@shopkeep.com
+vhart, varindrahart@gmail.com
 
 ## License
 

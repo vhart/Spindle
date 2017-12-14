@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Spindle
 
-class IdentifiableDispatchQueue_SerialQueueSpec: QuickSpec {
+class IdentifiableDispatchQueue_SerialQueueSpec1: QuickSpec {
     override func spec() {
         describe("IdentifiableDispatchQueue.currentQueueIs(_:)") {
             context("when queue1 is a serial queue") {

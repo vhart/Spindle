@@ -2,10 +2,10 @@ import Quick
 import Nimble
 import Spindle
 
-class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
+class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec1: QuickSpec {
     override func spec() {
         describe("IdentifiableDispatchQueue.currentQueueIs(_:)") {
-            context("when queue1 is a non global concurrent queue") {
+            context("when queue1 QoS is a non global concurrent queue") {
 
                 var queue1: IdentifiableDispatchQueue!
 
@@ -86,9 +86,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
 
             context("when comparing two non-global concurrent queues") {
 
-                context("and queue1 is .background and queue2 is .background") {
+                context("and queue1 QoS is .background and queue2 QoS is .background") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .background, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .background, attributes: [.concurrent])
@@ -99,9 +99,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .background and queue2 is .default") {
+                context("and queue1 QoS is .background and queue2 QoS is .default") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .background, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .default, attributes: [.concurrent])
@@ -112,9 +112,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .background and queue2 is .unspecified") {
+                context("and queue1 QoS is .background and queue2 QoS is .unspecified") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .background, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .unspecified, attributes: [.concurrent])
@@ -125,9 +125,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .background and queue2 is .utility") {
+                context("and queue1 QoS is .background and queue2 QoS is .utility") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .background, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .utility, attributes: [.concurrent])
@@ -138,9 +138,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .background and queue2 is .userInitiated") {
+                context("and queue1 QoS is .background and queue2 QoS is .userInitiated") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .background, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInitiated, attributes: [.concurrent])
@@ -151,9 +151,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .background and queue2 is .userInteractive") {
+                context("and queue1 QoS is .background and queue2 QoS is .userInteractive") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .background, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInteractive, attributes: [.concurrent])
@@ -164,9 +164,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .default and queue2 is .background") {
+                context("and queue1 QoS is .default and queue2 QoS is .background") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .default, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .background, attributes: [.concurrent])
@@ -177,9 +177,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .default and queue2 is .default") {
+                context("and queue1 QoS is .default and queue2 QoS is .default") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .default, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .default, attributes: [.concurrent])
@@ -190,9 +190,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .default and queue2 is .unspecified") {
+                context("and queue1 QoS is .default and queue2 QoS is .unspecified") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .default, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .unspecified, attributes: [.concurrent])
@@ -203,9 +203,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .default and queue2 is .utility") {
+                context("and queue1 QoS is .default and queue2 QoS is .utility") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .default, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .utility, attributes: [.concurrent])
@@ -216,9 +216,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .default and queue2 is .userInitiated") {
+                context("and queue1 QoS is .default and queue2 QoS is .userInitiated") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .default, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInitiated, attributes: [.concurrent])
@@ -229,9 +229,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .default and queue2 is .userInteractive") {
+                context("and queue1 QoS is .default and queue2 QoS is .userInteractive") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .default, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInteractive, attributes: [.concurrent])
@@ -242,9 +242,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .unspecified and queue2 is .background") {
+                context("and queue1 QoS is .unspecified and queue2 QoS is .background") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .unspecified, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .background, attributes: [.concurrent])
@@ -255,9 +255,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .unspecified and queue2 is .default") {
+                context("and queue1 QoS is .unspecified and queue2 QoS is .default") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .unspecified, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .default, attributes: [.concurrent])
@@ -268,9 +268,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .unspecified and queue2 is .unspecified") {
+                context("and queue1 QoS is .unspecified and queue2 QoS is .unspecified") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .unspecified, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .unspecified, attributes: [.concurrent])
@@ -281,9 +281,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .unspecified and queue2 is .utility") {
+                context("and queue1 QoS is .unspecified and queue2 QoS is .utility") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .unspecified, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .utility, attributes: [.concurrent])
@@ -294,9 +294,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .unspecified and queue2 is .userInitiated") {
+                context("and queue1 QoS is .unspecified and queue2 QoS is .userInitiated") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .unspecified, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInitiated, attributes: [.concurrent])
@@ -307,9 +307,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .unspecified and queue2 is .userInteractive") {
+                context("and queue1 QoS is .unspecified and queue2 QoS is .userInteractive") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .unspecified, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInteractive, attributes: [.concurrent])
@@ -320,9 +320,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .utility and queue2 is .background") {
+                context("and queue1 QoS is .utility and queue2 QoS is .background") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .utility, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .background, attributes: [.concurrent])
@@ -333,9 +333,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .utility and queue2 is .default") {
+                context("and queue1 QoS is .utility and queue2 QoS is .default") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .utility, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .default, attributes: [.concurrent])
@@ -346,9 +346,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .utility and queue2 is .unspecified") {
+                context("and queue1 QoS is .utility and queue2 QoS is .unspecified") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .utility, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .unspecified, attributes: [.concurrent])
@@ -359,9 +359,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .utility and queue2 is .utility") {
+                context("and queue1 QoS is .utility and queue2 QoS is .utility") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .utility, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .utility, attributes: [.concurrent])
@@ -372,9 +372,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .utility and queue2 is .userInitiated") {
+                context("and queue1 QoS is .utility and queue2 QoS is .userInitiated") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .utility, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInitiated, attributes: [.concurrent])
@@ -385,9 +385,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .utility and queue2 is .userInteractive") {
+                context("and queue1 QoS is .utility and queue2 QoS is .userInteractive") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .utility, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInteractive, attributes: [.concurrent])
@@ -398,9 +398,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInitiated and queue2 is .background") {
+                context("and queue1 QoS is .userInitiated and queue2 QoS is .background") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInitiated, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .background, attributes: [.concurrent])
@@ -411,9 +411,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInitiated and queue2 is .default") {
+                context("and queue1 QoS is .userInitiated and queue2 QoS is .default") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInitiated, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .default, attributes: [.concurrent])
@@ -424,9 +424,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInitiated and queue2 is .unspecified") {
+                context("and queue1 QoS is .userInitiated and queue2 QoS is .unspecified") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInitiated, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .unspecified, attributes: [.concurrent])
@@ -437,9 +437,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInitiated and queue2 is .utility") {
+                context("and queue1 QoS is .userInitiated and queue2 QoS is .utility") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInitiated, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .utility, attributes: [.concurrent])
@@ -450,9 +450,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInitiated and queue2 is .userInitiated") {
+                context("and queue1 QoS is .userInitiated and queue2 QoS is .userInitiated") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInitiated, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInitiated, attributes: [.concurrent])
@@ -463,9 +463,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInitiated and queue2 is .userInteractive") {
+                context("and queue1 QoS is .userInitiated and queue2 QoS is .userInteractive") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInitiated, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInteractive, attributes: [.concurrent])
@@ -476,9 +476,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInteractive and queue2 is .background") {
+                context("and queue1 QoS is .userInteractive and queue2 QoS is .background") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInteractive, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .background, attributes: [.concurrent])
@@ -489,9 +489,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInteractive and queue2 is .default") {
+                context("and queue1 QoS is .userInteractive and queue2 QoS is .default") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInteractive, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .default, attributes: [.concurrent])
@@ -502,9 +502,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInteractive and queue2 is .unspecified") {
+                context("and queue1 QoS is .userInteractive and queue2 QoS is .unspecified") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInteractive, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .unspecified, attributes: [.concurrent])
@@ -515,9 +515,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInteractive and queue2 is .utility") {
+                context("and queue1 QoS is .userInteractive and queue2 QoS is .utility") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInteractive, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .utility, attributes: [.concurrent])
@@ -528,9 +528,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInteractive and queue2 is .userInitiated") {
+                context("and queue1 QoS is .userInteractive and queue2 QoS is .userInitiated") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInteractive, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInitiated, attributes: [.concurrent])
@@ -541,9 +541,9 @@ class IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec: QuickSpec {
                     }
                 }
 
-                context("and queue1 is .userInteractive and queue2 is .userInteractive") {
+                context("and queue1 QoS is .userInteractive and queue2 QoS is .userInteractive") {
 
-                    it("returns false for each pair") {
+                    it("returns false") {
 
                         let queue1 = IdentifiableDispatchQueue(label: "queue1", qos: .userInteractive, attributes: [.concurrent])
                         let queue2 = IdentifiableDispatchQueue(label: "queue2", qos: .userInteractive, attributes: [.concurrent])

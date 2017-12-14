@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* BaseLineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* BaseLineTest.swift */; };
+		D5751F0F1FE1E338001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5751F0E1FE1E338001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec2.swift */; };
+		D5751F111FE22BD4001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5751F101FE22BD4001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec3.swift */; };
+		D5751F131FE22DC8001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueueSpec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5751F121FE22DC8001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueueSpec2.swift */; };
 		D5BAF9561FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF9551FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift */; };
-		D5BAF9581FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift */; };
-		D5BAF95A1FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift */; };
-		D5BAF95C1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF95B1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift */; };
+		D5BAF9581FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec1.swift */; };
+		D5BAF95A1FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec1.swift */; };
 		F0210263529D01B2CFA8DF5A /* Pods_Spindle_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00C1597FF4A6136643B1CF1 /* Pods_Spindle_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		607FACE51AFB9204008FA782 /* Spindle_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spindle_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* BaseLineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLineTest.swift; sourceTree = "<group>"; };
 		679D853C32E87545E729646B /* Pods-Spindle_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spindle_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spindle_Tests/Pods-Spindle_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B5ACE11BE22895265480680A /* Spindle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Spindle.podspec; path = ../Spindle.podspec; sourceTree = "<group>"; };
 		C00C1597FF4A6136643B1CF1 /* Pods_Spindle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spindle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9CFA53498804176A3D2EF9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D5751F0E1FE1E338001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec2.swift; sourceTree = "<group>"; };
+		D5751F101FE22BD4001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec3.swift; sourceTree = "<group>"; };
+		D5751F121FE22DC8001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueueSpec2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueueSpec2.swift; sourceTree = "<group>"; };
 		D5BAF9551FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_InitializersSpec.swift; sourceTree = "<group>"; };
-		D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift; sourceTree = "<group>"; };
-		D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift; sourceTree = "<group>"; };
-		D5BAF95B1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift; path = ../IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift; sourceTree = "<group>"; };
+		D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec1.swift; sourceTree = "<group>"; };
+		D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec1.swift; sourceTree = "<group>"; };
 		EF21ADE525C6CE4BF4AA95EF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F794E1A488CB9491D1B80D79 /* Pods-Spindle_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spindle_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spindle_Tests/Pods-Spindle_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,11 +86,13 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* BaseLineTest.swift */,
 				D5BAF9551FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift */,
-				D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift */,
-				D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift */,
-				D5BAF95B1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift */,
+				D5BAF9571FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec1.swift */,
+				D5751F0E1FE1E338001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec2.swift */,
+				D5751F101FE22BD4001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec3.swift */,
+				D5BAF9591FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec1.swift */,
+				D5751F121FE22DC8001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueueSpec2.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -231,11 +237,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5751F111FE22BD4001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec3.swift in Sources */,
 				D5BAF9561FD644DC008229E5 /* IdentifiableDispatchQueue_InitializersSpec.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
-				D5BAF9581FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec.swift in Sources */,
-				D5BAF95C1FD718EF008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_GlobalQueueComparisonSpec.swift in Sources */,
-				D5BAF95A1FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec.swift in Sources */,
+				D5751F0F1FE1E338001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec2.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* BaseLineTest.swift in Sources */,
+				D5BAF9581FD7048E008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_SerialQueueSpec1.swift in Sources */,
+				D5BAF95A1FD70575008229E5 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueuesSpec1.swift in Sources */,
+				D5751F131FE22DC8001E7DE7 /* IdentifiableDispatchQueue_CurrentQueueIs_ConcurrentQueueSpec2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
