@@ -72,10 +72,10 @@ QUICK_EXPORT void qck_fcontext(NSString *description, QCKDSLEmptyBlock closure);
     Defines a closure to be run prior to any examples in the test suite.
     You may define an unlimited number of these closures, but there is no
     guarantee as to the order in which they're run.
- 
+
     If the test suite crashes before the first example is run, this closure
     will not be executed.
- 
+
     @param closure The closure to be run prior to any examples in the test suite.
  */
 static inline void beforeSuite(QCKDSLEmptyBlock closure) {
@@ -87,10 +87,10 @@ static inline void beforeSuite(QCKDSLEmptyBlock closure) {
     Defines a closure to be run after all of the examples in the test suite.
     You may define an unlimited number of these closures, but there is no
     guarantee as to the order in which they're run.
-     
+
     If the test suite crashes before all examples are run, this closure
     will not be executed.
- 
+
     @param closure The closure to be run after all of the examples in the test suite.
  */
 static inline void afterSuite(QCKDSLEmptyBlock closure) {
@@ -100,7 +100,7 @@ static inline void afterSuite(QCKDSLEmptyBlock closure) {
 /**
     Defines a group of shared examples. These examples can be re-used in several locations
     by using the `itBehavesLike` function.
- 
+
     @param name The name of the shared example group. This must be unique across all shared example
                 groups defined in a test suite.
     @param closure A closure containing the examples. This behaves just like an example group defined
@@ -114,7 +114,7 @@ static inline void sharedExamples(NSString *name, QCKDSLSharedExampleBlock closu
 /**
     Defines an example group. Example groups are logical groupings of examples.
     Example groups can share setup and teardown code.
- 
+
     @param description An arbitrary string describing the example group.
     @param closure A closure that can contain other examples.
  */
@@ -134,7 +134,7 @@ static inline void context(NSString *description, QCKDSLEmptyBlock closure) {
     group. This closure is not run for pending or otherwise disabled examples.
     An example group may contain an unlimited number of beforeEach. They'll be
     run in the order they're defined, but you shouldn't rely on that behavior.
- 
+
     @param closure The closure to be run prior to each example.
  */
 static inline void beforeEach(QCKDSLEmptyBlock closure) {
@@ -154,7 +154,7 @@ static inline void beforeEachWithMetadata(QCKDSLExampleMetadataBlock closure) {
     group. This closure is not run for pending or otherwise disabled examples.
     An example group may contain an unlimited number of afterEach. They'll be
     run in the order they're defined, but you shouldn't rely on that behavior.
- 
+
     @param closure The closure to be run after each example.
  */
 static inline void afterEach(QCKDSLEmptyBlock closure) {
@@ -172,7 +172,7 @@ static inline void afterEachWithMetadata(QCKDSLExampleMetadataBlock closure) {
 /**
     Defines an example or example group that should not be executed. Use `pending` to temporarily disable
     examples or groups that should not be run yet.
- 
+
     @param description An arbitrary string describing the example or example group.
     @param closure A closure that will not be evaluated.
  */

@@ -72,7 +72,7 @@ end
 
 ## Projects using Quick
 
-Over ten-thousand apps use either Quick and Nimble however, as they are not included in the app binary, neither appear in “Top Used Libraries” blog posts. Therefore, it would be greatly appreciated to remind contributors that their efforts are valued by compiling a list of organizations and projects that use them. 
+Over ten-thousand apps use either Quick and Nimble however, as they are not included in the app binary, neither appear in “Top Used Libraries” blog posts. Therefore, it would be greatly appreciated to remind contributors that their efforts are valued by compiling a list of organizations and projects that use them.
 
 Does your organization or project use Quick and Nimble? If yes, [please add your project to the list](https://github.com/Quick/Quick/wiki/Projects-using-Quick).
 

@@ -624,13 +624,13 @@ expect(actual) !== expected
 ```
 
 It is important to remember that `beIdenticalTo` only makes sense when comparing
-types with reference semantics, which have a notion of identity. In Swift, 
-that means types that are defined as a `class`. 
+types with reference semantics, which have a notion of identity. In Swift,
+that means types that are defined as a `class`.
 
 This matcher will not work when comparing types with value semantics such as
 those defined as a `struct` or `enum`. If you need to compare two value types,
 consider what it means for instances of your type to be identical. This may mean
-comparing individual properties or, if it makes sense to do so, conforming your type 
+comparing individual properties or, if it makes sense to do so, conforming your type
 to `Equatable` and using Nimble's equivalence matchers instead.
 
 
@@ -827,7 +827,7 @@ If you're using Swift, you can use the `throwAssertion` matcher to check if an a
 ```swift
 // Swift
 
-// Passes if 'somethingThatThrows()' throws an assertion, 
+// Passes if 'somethingThatThrows()' throws an assertion,
 // such as by calling 'fatalError()' or if a precondition fails:
 expect { try somethingThatThrows() }.to(throwAssertion())
 expect { () -> Void in fatalError() }.to(throwAssertion())
@@ -860,7 +860,7 @@ Notes:
 If you're using Swift 2.0 or newer, you can use the `throwError` matcher to check if an error is thrown.
 
 Note:
-The following code sample references the `Swift.Error` protocol. 
+The following code sample references the `Swift.Error` protocol.
 This is `Swift.ErrorProtocol` in versions of Swift prior to version 3.0.
 
 ```swift
@@ -949,7 +949,7 @@ expect(actual).to(raiseException().satisfyingBlock(^(NSException *exception) {
 }));
 ```
 
-Note: Swift currently doesn't have exceptions (see [#220](https://github.com/Quick/Nimble/issues/220#issuecomment-172667064)). 
+Note: Swift currently doesn't have exceptions (see [#220](https://github.com/Quick/Nimble/issues/220#issuecomment-172667064)).
 Only Objective-C code can raise exceptions that Nimble will catch.
 
 ## Collection Membership
@@ -1039,7 +1039,7 @@ struct Turtle {
 
 let turtles: [Turtle] = functionThatReturnsSomeTurtlesInAnyOrder()
 
-// This set of matchers passes regardless of whether the array is 
+// This set of matchers passes regardless of whether the array is
 // [{color: "blue"}, {color: "green"}] or [{color: "green"}, {color: "blue"}]:
 
 expect(turtles).to(containElementSatisfying({ turtle in
@@ -1060,12 +1060,12 @@ expect(turtles).to(containElementSatisfying({ turtle in
 @property (nonatomic, readonly, nonnull) NSString *color;
 @end
 
-@implementation Turtle 
+@implementation Turtle
 @end
 
 NSArray<Turtle *> * __nonnull turtles = functionThatReturnsSomeTurtlesInAnyOrder();
 
-// This set of matchers passes regardless of whether the array is 
+// This set of matchers passes regardless of whether the array is
 // [{color: "blue"}, {color: "green"}] or [{color: "green"}, {color: "blue"}]:
 
 expect(turtles).to(containElementSatisfying(^BOOL(id __nonnull object) {

@@ -55,9 +55,9 @@ static QuickSpec *currentSpec = nil;
 + (NSArray *)testInvocations {
     NSArray *examples = [[World sharedWorld] examplesForSpecClass:[self class]];
     NSMutableArray *invocations = [NSMutableArray arrayWithCapacity:[examples count]];
-    
+
     NSMutableSet<NSString*> *selectorNames = [NSMutableSet set];
-    
+
     for (Example *example in examples) {
         SEL selector = [self addInstanceMethodForExample:example classSelectorNames:selectorNames];
 
@@ -101,17 +101,17 @@ static QuickSpec *currentSpec = nil;
     });
 
     const char *types = [[NSString stringWithFormat:@"%s%s%s", @encode(void), @encode(id), @encode(SEL)] UTF8String];
-    
+
     NSString *originalName = example.name.qck_c99ExtendedIdentifier;
     NSString *selectorName = originalName;
     NSUInteger i = 2;
-    
+
     while ([selectorNames containsObject:selectorName]) {
         selectorName = [NSString stringWithFormat:@"%@_%tu", originalName, i++];
     }
-    
+
     [selectorNames addObject:selectorName];
-    
+
     SEL selector = NSSelectorFromString(selectorName);
     class_addMethod(self, selector, implementation, types);
 

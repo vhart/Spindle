@@ -12,7 +12,7 @@
 #include <mach/message.h>
 #include <mach/mig_errors.h>
 #include <mach/port.h>
-	
+
 /* BEGIN VOUCHER CODE */
 
 #ifndef KERNEL
@@ -34,10 +34,10 @@ extern "C" {
 #endif // __has_include(<mach/mach_voucher_types.h>)
 #endif // __has_include
 #endif // !KERNEL
-	
+
 /* END VOUCHER CODE */
 
-	
+
 /* BEGIN MIG_STRNCPY_ZEROFILL CODE */
 
 #if defined(__has_include)
@@ -57,7 +57,7 @@ extern "C" {
 #endif /* __MIG_STRNCPY_ZEROFILL_FORWARD_TYPE_DECLS__ */
 #endif /* __has_include(<mach/mig_strncpy_zerofill_support.h>) */
 #endif /* __has_include */
-	
+
 /* END MIG_STRNCPY_ZEROFILL CODE */
 
 
