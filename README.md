@@ -9,8 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 Spindle is available through [CocoaPods](http://cocoapods.org). To install
@@ -20,9 +18,59 @@ it, simply add the following line to your Podfile:
 pod 'Spindle'
 ```
 
-## Author
+### Alternative Installation
 
-vhart, varindrahart@gmail.com
+The Spindle library is relatively light weight, so one option is to copy the `IdentifiableDispatchQueue` file into your project or workspace.
+
+## IdentifiableDispatchQueue Examples
+
+Deadlock prevention
+
+```swift
+let writeQueue = IdentifiableDispatchQueue(label: "com.app.database-write.queue")
+
+// synchronously write to the database
+func write(obj: DBObject) {
+    if IdentifiableDispatchQueue.currentQueueIs(writeQueue) {
+        save(obj)
+    } else {
+        writeQueue.queue.sync {
+            save(obj)
+        }
+    }
+}
+
+private func save(obj: DBObject) {
+  // save
+}
+```
+
+Queue Assertion
+
+```swift
+let commandQueue = IdentifiableDispatchQueue(label: "com.app.command-processing.queue")
+
+func updateCache(obj: SomeObject) {
+    commandQueue.queue.async {
+      emptyOutdated()
+      fillCache(obj)
+    }
+}
+
+private func emptyOutdated() {
+    precondition(IDQ.currentQueueIs(commandQueue), "This method should only be called on the commandQueue") 
+}
+
+private func fillCache(obj: SomeObject) {
+    precondition(IDQ.currentQueueIs(commandQueue), "This method should only be called on the commandQueue") 
+}
+
+```
+
+Debugging
+
+In a situation where threading is heavily used, sometimes it's helpful to be able to tell which queues are causing conflicts or performing stateful mutations.
+
 
 ## License
 
