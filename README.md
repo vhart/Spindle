@@ -51,7 +51,7 @@ let concurrentQueue = IdentifiableDispatchQueue(label: "com.app.concurrent.queue
 
 Init with underlying queue (failable initializer)
 
-```
+```swift
 let someQueue = DispatchQueue(label: "com.app.some.queue")
 let identifiableQueue: IdentifiableDispatchQueue? = IdentifiableDispatchQueue(underlyingQueue: someQueue)
 ```
