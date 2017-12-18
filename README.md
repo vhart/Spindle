@@ -24,6 +24,40 @@ The Spindle library is relatively light weight, so one option is to copy the `Id
 
 ## IdentifiableDispatchQueue Examples
 
+### Initializing
+
+The `IdentifiableDispatchQueue` mimics the initializers of `DispatchQueue` to make replacing as easy as possible.
+
+Serial Queue
+
+```swift
+let serialQueue = IdentifiableDispatchQueue(label: "com.app.serial.queue")
+```
+
+Concurrent Queue
+
+```swift
+let concurrentQueue = IdentifiableDispatchQueue(label: "com.app.concurrent.queue", 
+                                                attributes: [.concurrent])
+```
+
+with Quality of Service (qos)
+
+```swift
+let concurrentQueue = IdentifiableDispatchQueue(label: "com.app.concurrent.queue", 
+                                                qos: .background, 
+                                                attributes: [.concurrent])
+```
+
+Init with underlying queue (failable initializer)
+
+```
+let someQueue = DispatchQueue(label: "com.app.some.queue")
+let identifiableQueue: IdentifiableDispatchQueue? = IdentifiableDispatchQueue(underlyingQueue: someQueue)
+```
+
+### Possible Uses
+
 Deadlock prevention
 
 ```swift
@@ -71,6 +105,12 @@ Debugging
 
 In a situation where threading is heavily used, sometimes it's helpful to be able to tell which queues are causing conflicts or performing stateful mutations.
 
+
+## Caveats
+
+The only caveat is that you cannot use a default global queues as the underlying queue as all concurrent queues ultimately retarget the global queue with the corresponding Quality of Service (qos). This means that if global queues were allowed to be used as underlying queues, they would cause false positives when passed into the `currentQueueIs` function during execution on a concurrent queue with the same qos.
+
+If you require a queue with a specific qos, simply pass the qos into the IdentifiableDispatchQueue's initializer.  
 
 ## License
 
